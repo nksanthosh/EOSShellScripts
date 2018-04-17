@@ -1,9 +1,9 @@
 #!/bin/bash
-DIR="/opt/arrowhead/ArrowheadNode"
+DIR="/home/ubuntu/arrowhead_testnet/arrowhead"
 if [ -f $DIR"/eosd.pid" ]; then
 pid=`cat $DIR"/eosd.pid"`
 echo $pid
-kill $pid
+kill -9 $pid
 rm -r $DIR"/eosd.pid"
 echo -ne "Stoping Node"
 while true; do
